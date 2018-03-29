@@ -3,7 +3,7 @@ import '../styles/button.css';
 
 const Func = props => (
   <div className="button">
-    {props.function}
+    {props.display}
   </div>
 );
 

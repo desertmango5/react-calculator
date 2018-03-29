@@ -1,18 +1,18 @@
 import React from 'react';
-import '../styles/FunctionButtons.css';
 import Func from './Func';
 import ClearButton from './ClearButton';
+import '../styles/FunctionButtons.css';
 
 const FunctionButtons = props => (
-  <div className="function-buttons">
-    <Func function="&times;" className="times" />
-    <Func function="&divide;" className="divide" />
-    <Func function="&minus;" className="minus" />
-    <Func function="&radic;" className="sqrt" />
-    <Func function="&#43;" className="plus" />
-    <Func function="&plusmn;" className="plus-minus" />
-    <ClearButton function="c" className="clear" />
-  </div>
+  <section className="function-buttons">
+    <Func display="&times;" className="multiply" />
+    <Func display="&divide;" className="divide" />
+    <Func display="&minus;" className="minus" />
+    <Func display="&radic;" className="sqrt" />
+    <Func display="&#43;" className="plus" />
+    <Func display="&plusmn;" className="plus-minus" />
+    <ClearButton display="c" className="clear" />
+  </section>
 );
 
 export default FunctionButtons;

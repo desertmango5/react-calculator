@@ -3,7 +3,7 @@ import '../styles/ClearButton.css';
 
 const ClearButton = props => (
   <div className="clear-button">
-    {props.function}
+    {props.display}
   </div>
 );
 

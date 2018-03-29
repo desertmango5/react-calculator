@@ -5,7 +5,7 @@ import FunctionButtons from './FunctionButtons';
 
 const Calculator = props => (
   <div className="calculator">
-    <NumberButtons className="NumberButtons" />
+    <NumberButtons />
     <FunctionButtons />
   </div>
 );

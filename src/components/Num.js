@@ -3,7 +3,7 @@ import '../styles/button.css';
 
 const Num = props => (
   <div className="button">
-    {props.number}
+    {props.display}
   </div>
 );
 

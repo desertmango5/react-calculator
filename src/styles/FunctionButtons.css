@@ -3,39 +3,37 @@
   grid-template-columns: repeat(2, 7rem);
   grid-template-rows: repeat(4, 4rem);
   grid-gap: 1rem;
+  grid-template-areas: 
+    "multiply   divide"
+    "minus      sqrt"
+    "plus       plus-minus"
+    "plus       clear";
 }
 
-.times {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.multiply {
+  grid-area: multiply;
 }
 
 .divide {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-area: divide;
 }
 
 .minus {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-area: minus;
 }
 
 .sqrt {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-area: sqrt;
 }
 
 .plus {
-  grid-column: 1 / -1;
-  grid-row: 3 / 5;
+  grid-area: plus;
 }
 
 .plus-minus {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-area: plus-minus;
 }
 
 .clear {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-area: clear;
 }
