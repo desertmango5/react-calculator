@@ -1,0 +1,6 @@
+.number-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 7rem);
+  grid-template-rows: repeat(4, 4rem);
+  grid-gap: 1rem;
+}

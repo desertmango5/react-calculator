@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import Buttons from './Buttons';
+import Calculator from './Calculator';
 
 class App extends Component {
   state = {
@@ -27,10 +27,9 @@ class App extends Component {
 
 
   render() {
-    const test = this.divide(7, 3);
     return (
       <div className="App">
-        <Buttons />
+        <Calculator />
       </div>
     );
   }
