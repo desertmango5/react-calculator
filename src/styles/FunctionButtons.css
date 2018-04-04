@@ -28,7 +28,9 @@
 
 .plus {
   grid-area: plus;
+  display: grid;
 }
+
 
 .plus-minus {
   grid-area: plus-minus;
@@ -36,4 +38,5 @@
 
 .clear {
   grid-area: clear;
+  display: grid;
 }

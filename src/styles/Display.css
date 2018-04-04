@@ -2,8 +2,29 @@
   border: 1px solid green;
   padding: 1rem 2rem;
   display: flex;
+  flex-direction: column;
   background: #777;
   border-radius: 1rem;
+}
+
+.display__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #ddd;
+  padding: 0 1rem 0.2rem 1rem;
+}
+
+.display__text-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.display__text-date {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #bbb;
+
 }
 
 .display__border {
@@ -31,4 +52,5 @@
   font-size: 5rem;
   margin: 0;
   padding: 0;
+  color: #222;
 }

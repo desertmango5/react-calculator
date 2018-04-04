@@ -7,11 +7,19 @@ class App extends Component {
     num1: null,
     num2: null,
     function: null,
-    display: 0,
+    initialDisplay: 0,
+    display: [],
   }
 
-  setNum1 = (num) => {
-    this.setState({ num1: num });
+  setDisplay = (num) => {
+    const newDisplay = this.state.display;
+    newDisplay.push(num);
+    console.log(newDisplay);
+    this.setState({ display: newDisplay });
+  }
+
+  clearDisplay = () => {
+    this.setState({ display: [] });
   }
 
   render() {
@@ -20,6 +28,9 @@ class App extends Component {
         <Calculator 
           setNum1={this.setNum1}
           display={this.state.display}
+          initialDisplay={this.state.initialDisplay}
+          setDisplay={this.setDisplay}
+          clearDisplay={this.clearDisplay}
         />
       </div>
     );

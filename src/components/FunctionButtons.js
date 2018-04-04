@@ -9,9 +9,13 @@ const FunctionButtons = props => (
     <Func display="&divide;" className="divide" />
     <Func display="&minus;" className="minus" />
     <Func display="&radic;" className="sqrt" />
-    <Func display="&#43;" className="plus" />
+    <section className="plus">
+      <Func display="&#43;" className="plus__button" />
+    </section>
     <Func display="&plusmn;" className="plus-minus" />
-    <ClearButton display="c" className="clear" />
+    <section className="clear">
+      <ClearButton clearDisplay={props.clearDisplay} display="c" />
+    </section>
   </section>
 );
 
