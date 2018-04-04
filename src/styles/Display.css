@@ -49,6 +49,7 @@
 }
 
 .display__numbers {
+  font-family: var(--display-font);
   font-size: 5rem;
   margin: 0;
   padding: 0;
