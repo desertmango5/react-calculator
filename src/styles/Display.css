@@ -1,0 +1,34 @@
+.display {
+  border: 1px solid green;
+  padding: 1rem 2rem;
+  display: flex;
+  background: #777;
+  border-radius: 1rem;
+}
+
+.display__border {
+  display: flex;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.display__screen {
+  --bg-color: #ccc;
+  
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 0.5rem;
+  border: 2px ridge white;
+  border-radius: 0.3rem;
+}
+
+.display__numbers {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
