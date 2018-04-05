@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/NumberButtons.css';
 import Num from './Num';
+import Equal from './Equal';
 
 const NumberButtons = props => (
   <section className="number-buttons">
@@ -15,7 +16,7 @@ const NumberButtons = props => (
     <Num setDisplay={props.setDisplay} display="3" />
     <Num setDisplay={props.setDisplay} display="0" />
     <Num setDisplay={props.setDisplay} display="." />
-    <Num setDisplay={props.setDisplay} display="=" />
+    <Equal setDisplay={props.setDisplay} display="=" />
   </section>
 );
 

@@ -13,13 +13,19 @@ const Calculator = props => (
       />
     </section>
     <NumberButtons 
-      setNum1={props.setNum1}
       setDisplay={props.setDisplay}
+      equal={props.equal}
       className="calculator__NumberButtons"
     />
     <FunctionButtons 
       className="calculator__FunctionButtons"
       clearDisplay={props.clearDisplay}
+      addition={props.addition}
+      subtract={props.subtract}
+      multiply={props.multiply}
+      divide={props.divide}
+      sqrt={props.sqrt}
+      plusMinus={props.plusMinus}
     /> 
   </div>
 );

@@ -1,18 +1,23 @@
 import React from 'react';
-import Func from './Func';
+import Addition from './Addition';
+import Subtract from './Subtract';
+import Multiply from './Multiply';
+import Divide from './Divide';
+import SquareRoot from './SquareRoot';
+import PlusMinus from './PlusMinus';
 import ClearButton from './ClearButton';
 import '../styles/FunctionButtons.css';
 
 const FunctionButtons = props => (
   <section className="function-buttons">
-    <Func display="&times;" className="multiply" />
-    <Func display="&divide;" className="divide" />
-    <Func display="&minus;" className="minus" />
-    <Func display="&radic;" className="sqrt" />
+    <Multiply display="&times;" className="multiply" multiply={props.multiply} />
+    <Divide display="&divide;" className="divide" divide={props.divide} />
+    <Subtract display="&minus;" className="minus" subtract={props.subtract} />
+    <SquareRoot display="&radic;" className="sqrt" sqrt={props.sqrt} />
     <section className="plus">
-      <Func display="&#43;" className="plus__button" />
+      <Addition display="&#43;" className="plus__button" addition={props.addition} />
     </section>
-    <Func display="&plusmn;" className="plus-minus" />
+    <PlusMinus display="&plusmn;" className="plus-minus" plusMinus={props.plusMinus} />
     <section className="clear">
       <ClearButton clearDisplay={props.clearDisplay} display="c" />
     </section>

@@ -8,6 +8,6 @@ const Num = props => (
   >
     {props.display}
   </div>
-);
+); 
 
 export default Num;

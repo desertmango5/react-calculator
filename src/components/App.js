@@ -4,8 +4,8 @@ import Calculator from './Calculator';
 
 class App extends Component {
   state = {
-    num1: null,
-    num2: null,
+    num1: [],
+    num2: [],
     function: null,
     initialDisplay: 0,
     display: [],
@@ -14,23 +14,76 @@ class App extends Component {
   setDisplay = (num) => {
     const newDisplay = this.state.display;
     newDisplay.push(num);
-    console.log(newDisplay);
     this.setState({ display: newDisplay });
   }
-
+  
   clearDisplay = () => {
-    this.setState({ display: [] });
+    this.setState({ 
+      display: [],
+      function: null,
+    });
+  }
+
+  addition = () => {
+    this.setState({
+      num1: this.state.display,
+      function: 'add',
+    })
+  }
+
+  subtract = () => {
+    this.setState({
+      num1: this.state.display,
+      function: 'subtract',
+    })
+  }
+
+  multiply = () => {
+    this.setState({
+      num1: this.state.display,
+      function: 'multiply',
+    })
+  }
+
+  divide = () => {
+    this.setState({
+      num1: this.state.display,
+      function: 'divide',
+    })
+  }
+
+  sqrt = () => {
+    this.setState({ num1: this.state.display })
+    const str = this.state.num1;
+    const num = str.join('');
+    const sq = Math.sqrt(parseInt(num, 10));
+    console.log(sq);
+    this.setState({
+      display: sq,
+    })
+  }
+
+  plusMinus = () => {
+    this.setState({
+      num1: this.state.display,
+      function: 'plusMinus',
+    })
   }
 
   render() {
     return (
       <div className="App">
         <Calculator 
-          setNum1={this.setNum1}
           display={this.state.display}
           initialDisplay={this.state.initialDisplay}
           setDisplay={this.setDisplay}
           clearDisplay={this.clearDisplay}
+          addition={this.addition}
+          subtract={this.subtract}
+          multiply={this.multiply}
+          divide={this.divide}
+          sqrt={this.sqrt}
+          plusMinus={this.plusMinus}
         />
       </div>
     );

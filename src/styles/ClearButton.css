@@ -1,7 +1,7 @@
 .clear-button {
   --button-bg: #B22222;
   --button-color: #eee;
-  --button-shadow: 0.2rem 0.2rem 0.3rem #333;
+  --button-shadow: 0.3rem 0.3rem 0.2rem #333;
   --button-pressed-shadow: 0.1rem 0.1rem 0.2rem #333;
 
   display: flex;
