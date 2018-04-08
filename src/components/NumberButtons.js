@@ -1,23 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/NumberButtons.css';
-import Num from './Num';
-import Equal from './Equal';
+import Button from './Button';
 
-const NumberButtons = props => (
-  <section className="number-buttons">
-    <Num setDisplay={props.setDisplay} display="7" />
-    <Num setDisplay={props.setDisplay} display="8" />
-    <Num setDisplay={props.setDisplay} display="9" />
-    <Num setDisplay={props.setDisplay} display="4" />
-    <Num setDisplay={props.setDisplay} display="5" />
-    <Num setDisplay={props.setDisplay} display="6" />
-    <Num setDisplay={props.setDisplay} display="1" />
-    <Num setDisplay={props.setDisplay} display="2" />
-    <Num setDisplay={props.setDisplay} display="3" />
-    <Num setDisplay={props.setDisplay} display="0" />
-    <Num setDisplay={props.setDisplay} display="." />
-    <Equal setDisplay={props.setDisplay} display="=" />
-  </section>
-);
+class NumberButtons extends React.Component {
+  handleClick = (buttonName) => {
+    this.props.clickHandler(buttonName);
+  }
+
+  render() {
+    return (
+      <section className="number-buttons">
+        <Button clickHandler={this.handleClick} name="7" />
+        <Button clickHandler={this.handleClick} name="8" />
+        <Button clickHandler={this.handleClick} name="9" />
+        <Button clickHandler={this.handleClick} name="4" />
+        <Button clickHandler={this.handleClick} name="5" />
+        <Button clickHandler={this.handleClick} name="6" />
+        <Button clickHandler={this.handleClick} name="1" />
+        <Button clickHandler={this.handleClick} name="2" />
+        <Button clickHandler={this.handleClick} name="3" />
+        <Button clickHandler={this.handleClick} name="0" />
+        <Button clickHandler={this.handleClick} name="." />
+        <Button clickHandler={this.handleClick} name="=" />
+      </section>
+    );
+  }
+};
+
+NumberButtons.propTypes = {
+  clickHandler: PropTypes.func,
+}
 
 export default NumberButtons;

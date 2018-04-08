@@ -7,15 +7,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--button-color);
   background: var(--button-bg);
-  font-size: 3rem;
   border: none;
   border-radius: 2rem;
   box-shadow: var(--button-shadow);
+  color: var(--button-color);
+  font-size: 3rem;
 }
 
 .button:hover {
   box-shadow: var(--button-pressed-shadow);
   cursor: pointer;
+}
+
+.red {
+  background: #B22222;
 }

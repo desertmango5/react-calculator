@@ -9,24 +9,15 @@ const Calculator = props => (
     <section className="calculator__Display">
       <Display 
         display={props.display} 
-        initialDisplay={props.initialDisplay}  
       />
     </section>
     <NumberButtons 
-      setDisplay={props.setDisplay}
-      equal={props.equal}
       className="calculator__NumberButtons"
+      clickHandler={props.clickHandler}
     />
     <FunctionButtons 
       className="calculator__FunctionButtons"
-      clearDisplay={props.clearDisplay}
-      addition={props.addition}
-      subtract={props.subtract}
-      multiply={props.multiply}
-      divide={props.divide}
-      sqrt={props.sqrt}
-      plusMinus={props.plusMinus}
-      display={props.display}
+      clickHandler={props.clickHandler}
     /> 
   </div>
 );

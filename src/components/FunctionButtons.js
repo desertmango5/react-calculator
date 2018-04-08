@@ -1,31 +1,36 @@
 import React from 'react';
-import Addition from './Addition';
-import Subtract from './Subtract';
-import Multiply from './Multiply';
-import Divide from './Divide';
-import SquareRoot from './SquareRoot';
-import PlusMinus from './PlusMinus';
-import ClearButton from './ClearButton';
+import Button from './Button';
 import '../styles/FunctionButtons.css';
 
-const FunctionButtons = props => (
-  <section className="function-buttons">
-    <Multiply display="&times;" className="multiply" multiply={props.multiply} />
-    <Divide display="&divide;" className="divide" divide={props.divide} />
-    <Subtract display="&minus;" className="minus" subtract={props.subtract} />
-    <SquareRoot display="&radic;" className="sqrt" sqrt={props.sqrt} onDisplay={props.display} />
-    <section className="plus">
-      <Addition 
-        display="&#43;" 
-        className="plus__button" 
-        addition={props.addition} 
-      />
-    </section>
-    <PlusMinus display="&plusmn;" className="plus-minus" plusMinus={props.plusMinus} />
-    <section className="clear">
-      <ClearButton clearDisplay={props.clearDisplay} display="c" />
-    </section>
-  </section>
-);
+class FunctionButtons extends React.Component {
+  handleClick = (buttonName) => {
+    this.props.clickHandler(buttonName);
+  }
+
+  render() {
+    return (
+      <section className="function-buttons">
+        <Button name="&times;" className="multiply" clickHandler={this.handleClick} />
+        <Button name="&divide;" className="divide" clickHandler={this.handleClick} />
+        <Button name="&minus;" className="minus" clickHandler={this.handleClick} />
+        <Button name="&radic;" className="sqrt" clickHandler={this.handleClick} />
+        <section className="plus">
+          <Button 
+            name="&#43;" 
+            className="plus__button" 
+            clickHandler={this.handleClick}
+          />
+        </section>
+        <Button 
+          name="&plusmn;" 
+          className="plus-minus" 
+          clickHandler={this.handleClick} />
+        <section className="clear">
+          <Button  name="c" clickHandler={this.handleClick} red />
+        </section>
+      </section>
+    );
+  }
+} 
 
 export default FunctionButtons;
