@@ -6,6 +6,7 @@ class App extends Component {
   state = {
     num1: [],
     num2: [],
+    answer: null,
     function: null,
     initialDisplay: 0,
     display: [],
@@ -28,6 +29,7 @@ class App extends Component {
     this.setState({
       num1: this.state.display,
       function: 'add',
+      display: '+',
     })
   }
 
@@ -35,6 +37,7 @@ class App extends Component {
     this.setState({
       num1: this.state.display,
       function: 'subtract',
+      display: '-',
     })
   }
 
@@ -42,6 +45,7 @@ class App extends Component {
     this.setState({
       num1: this.state.display,
       function: 'multiply',
+      display: 'x',
     })
   }
 
@@ -49,24 +53,23 @@ class App extends Component {
     this.setState({
       num1: this.state.display,
       function: 'divide',
+      display: '/',
     })
   }
 
-  sqrt = () => {
-    this.setState({ num1: this.state.display })
-    const str = this.state.num1;
-    const num = str.join('');
+  sqrt = (display) => {
+    const num = display.join('');
     const sq = Math.sqrt(parseInt(num, 10));
     console.log(sq);
     this.setState({
-      display: sq,
+      display: [sq],
     })
   }
 
   plusMinus = () => {
+    
     this.setState({
       num1: this.state.display,
-      function: 'plusMinus',
     })
   }
 

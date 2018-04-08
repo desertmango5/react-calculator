@@ -13,9 +13,13 @@ const FunctionButtons = props => (
     <Multiply display="&times;" className="multiply" multiply={props.multiply} />
     <Divide display="&divide;" className="divide" divide={props.divide} />
     <Subtract display="&minus;" className="minus" subtract={props.subtract} />
-    <SquareRoot display="&radic;" className="sqrt" sqrt={props.sqrt} />
+    <SquareRoot display="&radic;" className="sqrt" sqrt={props.sqrt} onDisplay={props.display} />
     <section className="plus">
-      <Addition display="&#43;" className="plus__button" addition={props.addition} />
+      <Addition 
+        display="&#43;" 
+        className="plus__button" 
+        addition={props.addition} 
+      />
     </section>
     <PlusMinus display="&plusmn;" className="plus-minus" plusMinus={props.plusMinus} />
     <section className="clear">

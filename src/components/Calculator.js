@@ -26,6 +26,7 @@ const Calculator = props => (
       divide={props.divide}
       sqrt={props.sqrt}
       plusMinus={props.plusMinus}
+      display={props.display}
     /> 
   </div>
 );
