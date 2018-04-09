@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import Calculator from './Calculator';
+import calculate from '../logic/calculate';
 
 class App extends Component {
   state = {
@@ -10,7 +11,7 @@ class App extends Component {
   }
 
   handleClick = (buttonName) => {
-    console.log(buttonName);
+    this.setState(calculate(this.state, buttonName));
   }
 
 
