@@ -1,0 +1,68 @@
+
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(2, 12rem);
+  grid-auto-rows: auto;
+  grid-row-gap: 2rem;
+  grid-column-gap: 4rem;
+  justify-content: center;
+  background: beige;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem #777;
+  position: absolute;
+  margin-top: -1rem;
+  margin-left: 5rem;
+  transition: 0.35s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.shortcuts__close {
+  position: absolute;
+  margin-left: 29.5rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.shortcuts__close:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.shortcuts__title {
+  grid-column: span 2;
+  grid-row: 1 / 2;
+  font-size: 1.8rem;
+  justify-self: center;
+}
+
+.shortcuts__left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 1.5rem;
+  justify-self: end;
+}
+
+.shortcuts__right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-size: 1.5rem;
+  justify-self: start;
+}
+
+.shortcuts__left > p,
+.shortcuts__right > p {
+  margin-bottom: 0.7rem
+}
+
+.shortcuts__left span,
+.shortcuts__right span {
+  color: #777;
+}
+

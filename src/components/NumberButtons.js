@@ -22,7 +22,7 @@ class NumberButtons extends React.Component {
         <Button clickHandler={this.handleClick} name="3" />
         <Button clickHandler={this.handleClick} name="0" />
         <Button clickHandler={this.handleClick} name="." />
-        <Button clickHandler={this.handleClick} name="=" />
+        <Button clickHandler={this.handleClick} name="=" black />
       </section>
     );
   }

@@ -1,0 +1,21 @@
+.calculator__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: info;
+  align-self: start;
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+  background: #999;
+  border-radius: 50%;
+}
+
+.calculator__info > p {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.calculator__info:hover {
+  cursor: pointer;
+}

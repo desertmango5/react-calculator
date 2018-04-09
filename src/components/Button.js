@@ -6,7 +6,8 @@ const Button = (props) => {
     props.clickHandler(props.name);
   };
 
-  const className = props.red ? 'button red' : 'button';
+  const className = props.red ? 'button red' : 
+    props.black ? 'button black' : 'button';
   
   return (
     <div className={className} onClick={handleClick}>

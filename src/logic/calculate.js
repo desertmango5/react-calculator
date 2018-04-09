@@ -36,7 +36,7 @@ const calculate = (obj, buttonName) => {
     };
   }
 
-  // deal with a decimal point
+  // DECIMAL POINT
   if (buttonName === '.') {
     if (obj.next) {
       // if already a decimal, ignore click
@@ -45,7 +45,7 @@ const calculate = (obj, buttonName) => {
       }
       return { next: `${obj.next}.` };
     }
-    // add leading zero
+    // ADD ZERO TO FRONT OF DECIMAL
     if (!obj.next) {
       return { next: '0.' };
     }
@@ -58,6 +58,7 @@ const calculate = (obj, buttonName) => {
     return { total: '0.' };
   }
 
+  // EQUALS
   if (buttonName === '=') {
     if (obj.next && obj.operation) {
       return {
@@ -69,6 +70,7 @@ const calculate = (obj, buttonName) => {
       return {};
   }
 
+  // SQUARE ROOT
   if (buttonName === '√') {
     if (obj.next) {
       return {
@@ -77,6 +79,7 @@ const calculate = (obj, buttonName) => {
         operation: null,
       };
     }
+    // RETURN SQRT AFTER EQUAL BUTTON CLICKED
     if (obj.total) {
       return {
         total: sqrt(obj.total, '√'),
@@ -87,6 +90,7 @@ const calculate = (obj, buttonName) => {
     return {};
   }
 
+  // TOGGLE POSITIVE/NEGATIVE VALUES
   if (buttonName === '±') {
     if (obj.next) {
       return {
@@ -101,6 +105,8 @@ const calculate = (obj, buttonName) => {
     return {};
   }
 
+  // WHEN OPERATION BUTTON CLICKED, NEXT ==> TOTAL
+  // EXCLUDES SQRT AND PLUS/MINUS BUTTONS
   if (obj.operation) {
     return {
       total: operator(obj.total, obj.next, obj.operation),
@@ -109,14 +115,8 @@ const calculate = (obj, buttonName) => {
     };
   }
 
-  if (obj.operation) {
-    return {
-      total: operator(obj.total, obj.next, obj.operation),
-      next: null,
-      operation: buttonName,
-    };
-  }
-
+  // USE RESULT OF PREVIOUS CALCULATION WITHOUT CLEARING DISPLAY
+  // TO PERFORM NEW CALCULATION
   if (obj.total) {
     if (!obj.next && !obj.operation) {
       return {
@@ -127,6 +127,7 @@ const calculate = (obj, buttonName) => {
     }
   }
 
+  // MOVE NEXT VALUE TO TOTAL
   return {
     total: obj.next,
     next: null,

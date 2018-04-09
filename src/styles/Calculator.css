@@ -2,13 +2,14 @@
   display: grid;
   grid-template-areas: 
     "display  display"
-    "numbers  functions";
+    "numbers  functions"
+    "info     info";
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: 10rem auto;
+  grid-template-rows: 10rem auto 3rem;
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
   justify-content: center;
-  padding: 4rem 4rem 6rem 4rem;
+  padding: 4rem 4rem 0 4rem;
   background: #ddd;
   border-radius: 1.5rem;
   box-shadow: 0 0 0.8rem #222;
