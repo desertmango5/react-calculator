@@ -9,7 +9,7 @@ const operate = (numOne, numTwo, operation) => {
   if (operation === '+') {
     return one.plus(two).toString();
   }
-  if (operation === '-') {
+  if (operation === '−') {
     return one.minus(two).toString();
   }
   if (operation === '×') {
