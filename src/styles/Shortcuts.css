@@ -7,20 +7,23 @@
   grid-column-gap: 4rem;
   justify-content: center;
   background: beige;
+  color: #555;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 0.4rem #777;
   position: absolute;
   margin-top: -1rem;
   margin-left: 5rem;
-  transition: 0.35s ease-in-out;
+  transition: 0.25s ease-in-out;
   opacity: 1;
   visibility: visible;
+  transform: scale(1);
 }
 
 .hidden {
   opacity: 0;
   visibility: hidden;
+  transform: scale(0.5);
 }
 
 .shortcuts__close {
@@ -40,19 +43,21 @@
   grid-row: 1 / 2;
   font-size: 1.8rem;
   justify-self: center;
+  border-bottom: 1px solid green;
+  padding: 0 1.5rem 0.5rem 1.5rem;
 }
 
 .shortcuts__left {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   justify-self: end;
 }
 
 .shortcuts__right {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   justify-self: start;
 }
 
@@ -63,6 +68,13 @@
 
 .shortcuts__left span,
 .shortcuts__right span {
-  color: #777;
+  color: #555;
+  border: 1px solid #aaa;
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
 }
 
+span.arrow {
+  border: none;
+  color: #ccc;
+}

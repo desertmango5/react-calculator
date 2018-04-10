@@ -22,16 +22,16 @@ class Shortcuts extends React.Component {
           <div className="shortcuts__close" onClick={this.handleClick}>&times;</div>
           <h4 className="shortcuts__title">Keyboard Shortcuts</h4>
           <section className="shortcuts__left">
-            <p>&#43; <span>p</span></p>
-            <p>&minus; <span>m</span></p>
-            <p>&times; <span>t</span></p>
-            <p>&divide; <span>d</span></p>
+            <p>&#43; <span className="arrow">→</span> <span>p</span></p>
+            <p>&minus; <span className="arrow">→</span> <span>m</span></p>
+            <p>&times; <span className="arrow">→</span> <span>x</span></p>
+            <p>&divide; <span className="arrow">→</span> <span>d</span></p>
           </section>
           <section className="shortcuts__right">
-            <p>c <span>c</span></p>
-            <p>&radic; <span>s</span></p>
-            <p>&plusmn; <span>n</span></p>
-            <p>&#61; <span>return</span></p>
+            <p>&radic; <span className="arrow">→</span> <span>s</span></p>
+            <p>&plusmn; <span className="arrow">→</span> <span>n</span></p>
+            <p>&#61; <span className="arrow">→</span> <span>Return</span></p>
+            <p>c <span className="arrow">→</span> <span>space</span></p>
           </section>
         </div>
       </div>
