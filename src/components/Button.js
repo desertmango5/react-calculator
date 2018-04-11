@@ -3,8 +3,6 @@ import EventLister, { withOptions } from 'react-event-listener';
 import '../styles/button.css';
 
 const Button = (props) => {
-  const handleKeydown = e => e.key;
-
   const handleClick = (e) => {
     let { key } = e;
     if (key === 'p') { key = '+'; }
@@ -15,16 +13,19 @@ const Button = (props) => {
     if (key === 's') { key = '√'; }
     if (key === ' ') { key = 'c'; }
     if (key === 'Enter') { key = '='; }
-
+    
     const buttonName = key || props.name;
     props.clickHandler(buttonName);
   };
 
-  const className = props.red ? 'button red' : 
-    props.black ? 'button black' : 'button';
+  const buttonClicked = () => 'button__clicked';
+  const buttonColors = () => (props.red ? 'button red' : 
+    props.black ? 'button black' : 'button');
+
+  const className = [buttonColors()];
   
   return (
-    <div className={className} onClick={handleClick}>
+    <div className={className.join(' ')} onClick={handleClick}>
       {props.name}
       <EventLister 
         target="document"

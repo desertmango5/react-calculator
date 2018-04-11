@@ -6,7 +6,10 @@ const sqrt = (numOne, operation) => {
   Big.RM = 1;
 
   if (operation === '√') {
-    return one.sqrt().toString();
+    if (one > 0) {
+      return one.sqrt().toString();
+    }
+    return 'Error';
   }
 };
 

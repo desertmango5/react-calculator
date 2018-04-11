@@ -16,8 +16,11 @@
 }
 
 .button:hover {
-  box-shadow: var(--button-pressed-shadow);
   cursor: pointer;
+}
+
+.button__clicked {
+  box-shadow: var(--button-pressed-shadow);
 }
 
 .red {

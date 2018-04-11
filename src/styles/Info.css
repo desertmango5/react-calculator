@@ -5,6 +5,7 @@
   grid-area: info;
   align-self: start;
   margin-left: 1rem;
+  margin-top: -1rem;
   height: 2rem;
   width: 2rem;
   background: #999;
