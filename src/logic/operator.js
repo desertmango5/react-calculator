@@ -16,6 +16,9 @@ const operate = (numOne, numTwo, operation) => {
     return one.times(two).toString();
   }
   if (operation === '÷') {
+    if (two.eq(0)) {
+      return 'Error';
+    } 
     return one.div(two).toString();
   }
   throw Error(`Unknown operation '${operation}'`);

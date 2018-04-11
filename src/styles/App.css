@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Unica+One');
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Work+Sans');
 
 :root {
   --display-font: 'Unica One', sans-serif;
+  --button-font: 'Work Sans', sans-serif;
 }
 
 html {
@@ -27,4 +28,5 @@ body {
 .App {
   display: flex;
   justify-content: center;
+  font-family: var(--button-font);
 }
