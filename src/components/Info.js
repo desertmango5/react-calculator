@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/Info.css';
 
 const Info = props => (
-  <div className="calculator__info" onClick={props.clickHandler}>
-    <p>&#8505;</p>
+  <div className="calculator__info">
+    <p onClick={props.clickHandler}><span role="img" aria-label="keyboard">⌨️</span></p>
   </div>
 );
 

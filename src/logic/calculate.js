@@ -11,6 +11,13 @@ const calculate = (obj, buttonName) => {
     };
   }
 
+  // TODO: when operation button clicked twice, generates error. Fix.
+
+  // prevent setting operation when state is null
+  if (!isNumber(buttonName) && !obj.next && !obj.total && buttonName !== '.') {
+    return {};
+  }
+
   if (isNumber(buttonName)) {
     if (buttonName === '0' && obj.next === '0') {
       return {};

@@ -1,5 +1,6 @@
 import React from 'react';
 import EventLister, { withOptions } from 'react-event-listener';
+import ReactTimeout from 'react-timeout';
 import '../styles/button.css';
 
 class Button extends React.Component {
@@ -7,9 +8,19 @@ class Button extends React.Component {
     clicked: false,
   };
 
-  handleClick = () => {
+  isClicked = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
+  
+  unclick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  }
+
+  handleClick = (e) => {
     const buttonName = this.props.name;
     this.props.clickHandler(buttonName);
+    this.isClicked();
+    this.props.setTimeout(this.unclick, 150);
   };
 
   keyboardClick = (keyName) => {
@@ -38,9 +49,10 @@ class Button extends React.Component {
     this.props.clickHandler(newKey);
   }
 
-  isClicked = () => {
-    console.log('is clicked');
-  };
+  isClickedFalse = (isClicked) => {
+    const clicked = isClicked ? false : false;
+    this.setState({ clicked });
+  }
 
   render() {
     const { clicked } = this.state;
@@ -64,4 +76,4 @@ class Button extends React.Component {
 }
 
 
-export default Button;
+export default ReactTimeout(Button);
