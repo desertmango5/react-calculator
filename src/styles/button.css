@@ -2,7 +2,7 @@
   --button-bg: #777;
   --button-color: #eee;
   --button-shadow: 0.3rem 0.3rem 0.2rem #333;
-  --button-pressed-shadow: 0.1rem 0.1rem 0.2rem #333;
+  --button-clicked-shadow: 0.1rem 0.1rem 0.2rem #333;
 
   display: flex;
   justify-content: center;
@@ -13,6 +13,7 @@
   box-shadow: var(--button-shadow);
   color: var(--button-color);
   font-size: 3rem;
+  transition: 0.015s all ease;
 }
 
 .button:hover {
@@ -20,7 +21,7 @@
 }
 
 .button__clicked {
-  box-shadow: var(--button-pressed-shadow);
+  box-shadow: var(--button-clicked-shadow);
 }
 
 .red {
