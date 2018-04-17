@@ -20,11 +20,17 @@ const calculate = (obj, buttonName) => {
   if (isNumber(buttonName)) {
     // DO NOT CONCAT 0 IF NEXT = NULL
     if (buttonName === '0' && !obj.next) {
+      if (obj.total) {
+        return {
+          next: buttonName,
+        };
+      }
       return {};
     }
     // ENTER SECOND NUMBER IN CALCULATION-STORE IT IN NEXT
     if (obj.operation) {
-      if (obj.next) {
+      // REMOVE LEADING ZERO IF NON-ZERO NUMBER CLICKED
+      if (obj.next && obj.next !== '0') {
         return { next: obj.next + buttonName };
       }
       return { next: buttonName };
