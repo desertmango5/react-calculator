@@ -48,8 +48,6 @@ class Button extends React.Component {
       if (which === 57) { newKey = '9'; }
       if (!newKey) { return; }
     this.props.clickHandler(newKey);
-    this.buttonDown();
-    this.props.setTimeout(this.buttonUp, 150);
   }
 
   render() {
