@@ -11,7 +11,6 @@ const calculate = (obj, buttonName) => {
     };
   }
 
-  // TODO: when operation button clicked twice, generates error. Fix.
 
   // prevent setting operation when state is null
   if (!isNumber(buttonName) && !obj.next && !obj.total && buttonName !== '.') {
@@ -19,24 +18,26 @@ const calculate = (obj, buttonName) => {
   }
 
   if (isNumber(buttonName)) {
-    if (buttonName === '0' && obj.next === '0') {
+    // DO NOT CONCAT 0 IF NEXT = NULL
+    if (buttonName === '0' && !obj.next) {
       return {};
     }
-    // if operation, update next
+    // ENTER SECOND NUMBER IN CALCULATION-STORE IT IN NEXT
     if (obj.operation) {
       if (obj.next) {
         return { next: obj.next + buttonName };
       }
       return { next: buttonName };
     }
-    // if single number in next, concat next number
+
+    // ENTER FIRST NUMBER IN CALCULATION-STORE IT IN NEXT
     if (obj.next) {
       return {
         next: obj.next + buttonName,
         total: null,
       };
     }
-    // next = null, operation = null
+    // ENTER FIRST DIGIT OF FIRST NUMBER IN CALCULATION
     return {
       next: buttonName,
       total: null,
@@ -112,6 +113,16 @@ const calculate = (obj, buttonName) => {
     return {};
   }
 
+  // HANDLE MULTIPLE OPERATION CLICKS
+  // UPDATES OPERATION TO LATEST OPERATION CLICKED
+  if (obj.total && obj.operation && !obj.next) {
+    if (obj.operation) {
+      return {
+        operation: buttonName,
+      };
+    }
+  }
+
   // WHEN OPERATION BUTTON CLICKED, NEXT ==> TOTAL
   // EXCLUDES SQRT AND PLUS/MINUS BUTTONS
   if (obj.operation) {
@@ -121,6 +132,7 @@ const calculate = (obj, buttonName) => {
       operation: buttonName,
     };
   }
+
 
   // USE RESULT OF PREVIOUS CALCULATION WITHOUT CLEARING DISPLAY
   // TO PERFORM NEW CALCULATION

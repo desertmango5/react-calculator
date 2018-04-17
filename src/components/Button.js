@@ -8,19 +8,20 @@ class Button extends React.Component {
     clicked: false,
   };
 
-  isClicked = () => {
+
+  buttonDown = () => {
     this.setState({ clicked: !this.state.clicked });
   };
   
-  unclick = () => {
+  buttonUp = () => {
     this.setState({ clicked: !this.state.clicked });
   }
 
   handleClick = (e) => {
     const buttonName = this.props.name;
     this.props.clickHandler(buttonName);
-    this.isClicked();
-    this.props.setTimeout(this.unclick, 150);
+    this.buttonDown();
+    this.props.setTimeout(this.buttonUp, 150);
   };
 
   keyboardClick = (keyName) => {
@@ -47,11 +48,8 @@ class Button extends React.Component {
       if (which === 57) { newKey = '9'; }
       if (!newKey) { return; }
     this.props.clickHandler(newKey);
-  }
-
-  isClickedFalse = (isClicked) => {
-    const clicked = isClicked ? false : false;
-    this.setState({ clicked });
+    this.buttonDown();
+    this.props.setTimeout(this.buttonUp, 150);
   }
 
   render() {
