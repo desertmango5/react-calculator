@@ -26,3 +26,10 @@
 .calculator__FunctionButtons {
   grid-area: functions;
 }
+
+
+@media (max-width: 500px) {
+  .calculator {
+    padding: 3rem 2rem 0 2rem;
+  }
+}
