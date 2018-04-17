@@ -40,3 +40,16 @@
   grid-area: clear;
   display: grid;
 }
+
+
+@media (max-width: 450px) {
+  .function-buttons {
+    grid-template-columns: repeat(2, 5rem);
+  }
+}
+
+@media (max-width: 350px) {
+  .function-buttons {
+    grid-template-columns: repeat(2, 4rem);
+  }
+}
