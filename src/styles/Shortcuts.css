@@ -79,47 +79,4 @@ span.arrow {
   color: #ccc;
 }
 
-@media (max-width: 450px) {
-  .shortcuts {
-    grid-template-columns: repeat(2, 9rem);
-  }
 
-  .shortcuts__title {
-    font-size: 1.6rem;
-  }
-  
-  .shortcuts__left,
-  .shortcuts__right {
-    font-size: 1.3rem;
-  }
-  
-  .shortcuts__close {
-    position: absolute;
-    margin-left: 24rem;
-    margin-top: 0.5rem;
-    font-size: 2rem;
-  }  
-
-}
-
-@media (max-width: 350px) {
-  .shortcuts {
-    grid-template-columns: repeat(2, 8rem);
-  }
-
-  .shortcuts__title {
-    font-size: 1.5rem;
-  }
-  
-  .shortcuts__left,
-  .shortcuts__right {
-    font-size: 1rem;
-  }
-  
-  .shortcuts__close {
-    position: absolute;
-    margin-left: 22rem;
-    margin-top: 0.5rem;
-    font-size: 2rem;
-  }  
-}

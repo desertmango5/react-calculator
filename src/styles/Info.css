@@ -18,3 +18,10 @@
 .calculator__info:hover {
   cursor: pointer;
 }
+
+
+@media (max-width: 450px) {
+  .calculator__info {
+    display: none;
+  }
+}
